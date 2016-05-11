@@ -1,0 +1,32 @@
+﻿<Window x:Class="DemoCombo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoCombo"
+        mc:Ignorable="d"
+        Name="win"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+
+        <ComboBox x:Name="comboBox_Copy" Width="150" Height="40" Foreground="#FF00FB0B" Background="#FF303030" FontSize="16"  
+                SelectedValuePath="Content"
+                SelectedValue = "{Binding SelectedParam, ElementName=win, UpdateSourceTrigger=PropertyChanged}">
+            <ComboBoxItem Content="Ingen"/>
+            <ComboBoxItem Content="3x98"/>
+            <ComboBoxItem Content="3x112"/>
+            <ComboBoxItem Content="4x98"/>
+            <ComboBoxItem Content="4x100"/>
+            <ComboBoxItem Content="4x108"/>
+            <ComboBoxItem Content="4x114.3"/>
+            <ComboBoxItem Content="4x160"/>
+            <ComboBoxItem Content="5x98"/>
+            <ComboBoxItem Content="5x100"/>
+            <ComboBoxItem Content="5x108"/>
+
+        </ComboBox>
+        
+        <Label Content="{Binding SelectedParam, ElementName=win}"></Label>
+
+    </StackPanel>
+</Window>
